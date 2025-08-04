@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verifikasi Kartu Keluarga</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Form Verifikasi KK</h1>
+  <form id="kk-form">
+    <input type="text" name="namaLengkap" placeholder="Nama Lengkap" required />
+    <input type="text" name="namaAyah" placeholder="Nama Ayah" required />
+    <input type="text" name="namaIbu" placeholder="Nama Ibu" required />
+    <input type="text" name="domisili" placeholder="Domisili" required />
+    <input type="text" name="noWa" placeholder="Nomor WhatsApp" required />
+    <input type="file" name="kkFiles" multiple accept="image/*,.pdf" required />
+    <button type="submit">Kirim</button>
+  </form>
+  <div id="hasil"></div>
+  <script src="script.js"></script>
+</body>
+</html>

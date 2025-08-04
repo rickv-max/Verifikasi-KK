@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 10px;
+}
+input, button {
+  padding: 8px;
+}
+#hasil {
+  margin-top: 20px;
+  white-space: pre-wrap;
+  background: #f1f1f1;
+  padding: 10px;
+}
