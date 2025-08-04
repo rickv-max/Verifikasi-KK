@@ -1,3 +1,4 @@
+// netlify/functions/verify-kk.mjs
 import { google } from 'googleapis';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import admin from 'firebase-admin';
@@ -54,10 +55,11 @@ export default async (req, res) => {
       id: docRef.id,
     });
   } catch (error) {
-  console.error('🔥 ERROR:', error); // Tambahkan label
-  res.status(500).json({
-    errorType: error.name || 'Error',
-    errorMessage: error.message || 'Unknown Error',
-    stack: error.stack || 'No stack trace',
-  });
-}
+    console.error('🔥 ERROR:', error);
+    res.status(500).json({
+      errorType: error.name || 'Error',
+      errorMessage: error.message || 'Unknown Error',
+      stack: error.stack || 'No stack trace',
+    });
+  }
+};
