@@ -5,6 +5,7 @@
   "dependencies": {
     "firebase-admin": "^11.11.1",
     "googleapis": "^128.0.0",
-    "axios": "^1.6.8"
+    "axios": "^1.6.8",
+    "@google/generative-ai": "^0.12.0" // Tambahkan ini
   }
 }
