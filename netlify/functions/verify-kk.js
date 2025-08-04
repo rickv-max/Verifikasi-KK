@@ -54,7 +54,10 @@ export default async (req, res) => {
       id: docRef.id,
     });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: error.message || 'Terjadi kesalahan' });
-  }
-};
+  console.error('🔥 ERROR:', error); // Tambahkan label
+  res.status(500).json({
+    errorType: error.name || 'Error',
+    errorMessage: error.message || 'Unknown Error',
+    stack: error.stack || 'No stack trace',
+  });
+}
