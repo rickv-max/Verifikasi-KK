@@ -40,7 +40,6 @@ export default async (req, res) => {
 
     const content = result.response.text();
 
-    // Simpan ke Firestore
     const docRef = await db.collection('hasil_verifikasi_kk').add({
       namaLengkap,
       domisili,
